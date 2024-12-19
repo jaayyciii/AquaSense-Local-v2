@@ -1,0 +1,47 @@
+{
+  "name": "aquasense",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "description": "AquaSense Local Application",
+  "author": "Florin Tejeno Salinas",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "electron": "^25.9.8",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.aquasense.AquaSenseLocal",
+    "productName": "AquaSense Local",
+    "directories": {
+      "output": "dist"
+    },
+    "asar": true,
+    "files": [
+      "**/*",
+      "electron/**/*",
+      "backend/**/*",
+      "frontend/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "C:/Users/johnc/OneDrive/Desktop/Aqua Local Application/backend/dist/main.exe",
+        "to": "aquasense_api.exe",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "electron/assets/logo.ico"
+    }
+  }
+}
