@@ -1,0 +1,13 @@
+asyncio
+asyncpg
+datetime
+fastapi
+firebase
+firebase_admin
+pydantic
+sqlalchemy
+uvicorn
+pySerial
+numpy
+scikit-learn
+sympy
